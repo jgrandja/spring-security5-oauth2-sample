@@ -1,0 +1,4 @@
+rootProject.name = 'spring-security5-oauth2-sample'
+
+include 'auth-server'
+include 'oauth2login'

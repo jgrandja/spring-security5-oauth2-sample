@@ -1,0 +1,25 @@
+
+
+Generate RSA Public/Private Key Pair and save in Keystore
+-----
+keytool -genkeypair -dname "cn=OAuth2 Demo, ou=Spring, o=Pivotal, c=US" -alias oauth2-demo-key -keypass admin1234 -keystore ~/.keystore-oauth2-demo -storepass admin1234 -validity 365 -keyalg RSA -keysize 2048
+
+
+Export Certificate
+-----
+keytool -exportcert -alias oauth2-demo-key -file ~/oauth2-demo.crt -keystore ~/.keystore-oauth2-demo -storepass admin1234 -rfc
+
+
+Print Public Key
+-----
+openssl x509 -inform pem -in ~/oauth2-demo.crt -pubkey -noout
+
+
+Print Certificate
+-----
+keytool -printcert -file ~/oauth2-demo.crt -rfc
+
+
+Print Keystore content
+-----
+keytool -list -alias oauth2-demo-key -keystore ~/.keystore-oauth2-demo -storepass admin1234 -rfc
