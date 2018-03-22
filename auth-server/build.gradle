@@ -3,7 +3,7 @@ buildscript {
         maven { url 'https://repo.spring.io/libs-milestone' }
     }
     dependencies {
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.10.RELEASE'
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.0.0.RELEASE'
     }
 }
 
@@ -27,7 +27,7 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-security',
             'org.springframework.boot:spring-boot-starter-thymeleaf',
             'org.thymeleaf.extras:thymeleaf-extras-springsecurity4:2.1.2.RELEASE',
-            'org.springframework.security.oauth:spring-security-oauth2',
+            'org.springframework.security.oauth:spring-security-oauth2:2.2.1.RELEASE',
             'org.springframework.security:spring-security-jwt:1.0.9.RELEASE'
 
     testCompile 'org.springframework.boot:spring-boot-starter-test',
