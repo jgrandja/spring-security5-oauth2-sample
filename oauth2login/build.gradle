@@ -19,6 +19,7 @@ targetCompatibility = 1.8
 
 repositories {
     maven { url "https://repo.spring.io/libs-milestone" }
+    maven { url "https://repo.spring.io/libs-snapshot" }
     mavenCentral()
 }
 
@@ -26,8 +27,11 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-web",
             "org.springframework.boot:spring-boot-starter-thymeleaf",
             "org.springframework.boot:spring-boot-starter-security",
-            "org.springframework.security:spring-security-oauth2-client",
-            "org.springframework.security:spring-security-oauth2-jose",
+            "org.springframework.security:spring-security-config:5.1.0.BUILD-SNAPSHOT",
+            "org.springframework.security:spring-security-web:5.1.0.BUILD-SNAPSHOT",
+            "org.springframework.security:spring-security-oauth2-core:5.1.0.BUILD-SNAPSHOT",
+            "org.springframework.security:spring-security-oauth2-client:5.1.0.BUILD-SNAPSHOT",
+            "org.springframework.security:spring-security-oauth2-jose:5.1.0.BUILD-SNAPSHOT",
             "org.thymeleaf.extras:thymeleaf-extras-springsecurity4",
             "org.springframework:spring-webflux",
             "io.projectreactor.ipc:reactor-netty"

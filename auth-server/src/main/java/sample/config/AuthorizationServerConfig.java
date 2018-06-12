@@ -46,9 +46,10 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 		clients.inMemory()
 			.withClient("client-1234")
 				.secret("secret")
-				.authorizedGrantTypes("authorization_code")
+				.authorizedGrantTypes("authorization_code", "refresh_token")
 				.scopes("profile")
-				.redirectUris("http://localhost:8080/login/oauth2/code/login-client");
+				.redirectUris("http://localhost:8080/login/oauth2/code/login-client")
+				.accessTokenValiditySeconds(60);
 		// @formatter:on
 	}
 
